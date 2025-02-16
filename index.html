@@ -36,53 +36,60 @@
 
 </head>
 
-<body>
-	<!-- The navbar -->
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<body id="bodyColor">
+	<nav id="headerColor" class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
 		<div class="container-fluid">
-			<!-- The Logo -->
-			<a class="navbar-brand"><h1>Coca Cola</h1><h4>Refreshing The World, one sip at a time</h4></a>
-			
-			<!-- the Links -->
-			<div class="collapse navbar-collapse" id="collapsibleNavbar">
-				<ul class="navbar-nav">
+			<div class="logo">
+				<a class="navbar-brand" href="#">
+					<h1>1oca</h1>
+					<h2>Cola</h2>
+					<h3>Journey</h3>
+					<p>Refreshing the world, one story at a time</p>
+				</a>
+			</div>
+			<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-
+				target="#navbarSupportedContent">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link active">Home</a>
+						<a class="nav-link active" href="#">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link">About</a>
+						<a class="nav-link" href="#" data-toggle="popover" data-trigger="hover" data- placement="bottom"
+							title="About Web 3D Applications">About</a>
 					</li>
 					<!-- Dropdown -->
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Drinks</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item">Coke</a></li>
-							<li><a class="dropdown-item">Pepsi</a></li>
-							<li><a class="dropdown-item">Dr. Pepper</a></li>
-						</ul>
+						<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs- toggle="dropdown">
+							Drinks
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Coca Cola</a>
+							<a class="dropdown-item" href="#">Sprite</a>
+							<a class="dropdown-item" href="#">Dr Pepper</a>
+						</div>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link">Contact</a>
+						<a class="nav-link" href="#" data-bs-toggle="modal" data-bs- target="#contactModal">Contact</a>
 					</li>
-					
 				</ul>
 			</div>
-			
-			<!-- Collapsable Button -->
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-				<span class="navbar-toggler-icon"></span>
-			</button>
 		</div>
 	</nav>
-	
 	<div class="row">
-		<div class="col-sm-3"></div>
-		<div class="col-sm-6">
-			<p>Lorum ipsum, delore et amet</p>
-		</div>
-		<div class="col-sm-3"></div>
+		<div class="col-sm-12" style="background-color:red;">.col-sm-12</div>
 	</div>
-
+	<div class="row">
+		<div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4 The Cocoa Cola
+			image goes here, the text follows, which can be placed in a div tag and styled accordingly.</div>
+		<div class="col-sm-4" style="background-color:lightgrey;">.col-sm-4 The Sprite image goes
+			here, the text follows, which can be placed in a div tag and styled accordingly.</div>
+		<div class="col-sm-4" style="background-color:lavender;">.col-sm-4 The Dr Pepper image
+			goes here, the text follows, which can be placed in a div tag and styled accordingly.</div>
+	</div>
+	</div>
 </body>
 
 </html>

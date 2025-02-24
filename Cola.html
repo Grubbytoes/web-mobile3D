@@ -80,13 +80,27 @@
 		</div>
 	</nav>
 
-	<!-- Cola can -->
-	<div class="card-body">
-		<canvas id="threeContainer"></canvas>
+	<div class="container-fluid main-contents">
+		<div class="row">
+			<div class="col">
+
+				<!-- Cola can -->
+				<div class="card-body">
+					<div class="d-flex align-items-center">
+						<canvas id="threeContainer"></canvas>
+					</div>
+
+					<button id="btn">OPEN CAN</button>
+					<button id="toggleWireframe">TOGGLE WIREFRAME</button>
+					<button id="rotate">rotate</button>
+					<button id="switchModel">change model</button>
+					<button id="playSecondAnimation">recycle</button>
+				</div>
+			</div>
+		</div>
 	</div>
-	<a id="btn">OPEN CAN</a>
-	<!-- !Below breaks everything!? I don't understand!?!? -->
-	<!-- <script>
+	<!-- ! Below breaks everything!? I don't understand!?!? -->
+	<script>
 		function updateContainerSize() {
 			console.log("inline")
 			var container = document.getElementById("threeContainer");
@@ -94,12 +108,12 @@
 			var height = window.innerHeight;
 
 			container.width = width;
-			container.heigh = height;
+			container.height = height;
 		}
 
 		window.addEventListener('load', updateContainerSize);
 		window.addEventListener('resize', updateContainerSize);
-	</Script> -->
+	</Script>
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/106/three.min.js'></script>
 	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/OrbitControls.js'></script>
@@ -107,19 +121,19 @@
 	<script src="./scriptCola.js"></script>
 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-	  <div class="container-fluid">
-	  <div class="navbar-text float-left copyright">
-		<p><span class="align-baseline"></span>&copy 2024 3D Web Applications</p>
+		<div class="container-fluid">
+			<div class="navbar-text float-left copyright">
+				<p><span class="align-baseline"></span>&copy 2024 3D Web Applications</p>
+			</div>
+			<div class="navbar-text float-right social">
+				<a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+				<a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+				<a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
+				<a href="#"><i class="fab fa-github-square fa-2x"></i></a>
+			</div>
 		</div>
-		<div class="navbar-text float-right social">
-		  <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
-		  <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-		  <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
-		  <a href="#"><i class="fab fa-github-square fa-2x"></i></a>
-		</div>
-	  </div>
 	</nav>
-	
+
 </body>
 
 </html>

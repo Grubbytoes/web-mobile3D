@@ -21,7 +21,7 @@ function initialise() {
   renderer = new THREE.WebGLRenderer({canvas: canvas});
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
-  document.body.appendChild(renderer.domElement);
+  //document.body.appendChild(renderer.domElement);
 
   // Lights
   const lightPoint = new THREE.PointLight(0x404040, 4, 200);
@@ -50,6 +50,7 @@ function initialise() {
 
   // Resize logic
   window.addEventListener('resize', onresize, false);
+  window.addEventListener('load', onresize, false);
 
   animate();
 }

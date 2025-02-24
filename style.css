@@ -5,6 +5,8 @@
   media query and change the rule
 */
 
+
+
 /* Method to declare your own fonts */
 @font-face {
   font-family: cocaColaFont;
@@ -32,13 +34,6 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
-  overflow: hidden;
-}
-
-#threeContainer {
-  width: 100%;
-  height: 100%;
-  display: block;
   overflow: hidden;
 }
 

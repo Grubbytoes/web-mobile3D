@@ -13,27 +13,33 @@ function initialise() {
   // Getting camera, scene, and renderer
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0x011638);
+
   camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.z = 15;
-  renderer = new THREE.WebGLRenderer();
+
+  const canvas = document.getElementById("threeContainer");
+  renderer = new THREE.WebGLRenderer({canvas: canvas});
   renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setPixelRatio(window.devicePixelRatio);
   document.body.appendChild(renderer.domElement);
 
   // Lights
   const lightPoint = new THREE.PointLight(0x404040, 4, 200);
   const lightAmbient = new THREE.AmbientLight(0x011638, 1);
-  lightPoint.position.set(4, 8, 16);
+  lightPoint.position.set(4, 16, 16);
   scene.add(lightPoint, lightAmbient);
 
   // Controls
-  const controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.target.set(0, 0, 0);
+  const orbit_controls = new THREE.OrbitControls(camera, renderer.domElement);
   mode = "open";
   const btn = document.getElementById("btn");
+  
+  orbit_controls.target.set(0, 0, 0);
+
   btn.addEventListener('click', () => {
     console.log("You clicked meh.")
     if (mode == "open") {
-      actions.array.forEach(act => {
+      actions.forEach(act => {
         // This assumes we have some animations in actions
         act.timeScale = 1;
         act.reset();
@@ -75,7 +81,11 @@ function animate() {
 }
 
 function onresize() {
-  camera.aspect = window.innerWidth / window.innerHeight;
+  const canvas = document.getElementById("threeContainer"); // ...?
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  camera.aspect = width / height;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(width, height);
 }
